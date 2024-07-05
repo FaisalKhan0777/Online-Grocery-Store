@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+
+<html>
+    <title>Baby Products</title>
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--==Title==================================-->
+<title>
+
+    Faisal Grocery Store
+
+</title>
+<style>
+    .add-to-cart {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+</style>
+<!--==Stylesheet=============================-->
+<link rel="stylesheet" type="text/css" href="Home Page CSS.css">
+
+<!--==Fav-icon===============================-->
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+
+<!--==Using-Font-Awesome=====================-->
+<script src="https://kit.fontawesome.com/5471644867.js" crossorigin="anonymous"></script>
+
+<script src = 'Home Page JS.js' defer></script>
+    
+<link rel="shortcut icon" type="image/jpg" href="C:\Users\ASUS\Desktop\Project\Faisal Grocery Store\images\images\fav-icon.png"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body >
+    
+
+        
+        <section id="popular-product">
+            <!--heading----------->
+            <div class="product-heading">
+                <h2 class = 'fruits-heading'>Baby Care Products</h2>
+            </div>
+            <!--box-container------>
+            <div class="product-container">
+                <!--box---------->
+                <div class="product-box" style = "height: 95%;">
+                    <img alt="Johnson's Baby Oil" src="https://i.imgur.com/0LKWxiJ.jpg">
+                    
+                    <strong>Johnson's Baby Oil</strong>
+                    <span class="quantity">500 ml</span>
+                    <span class="price">Rs. 425</span>
+                    <!--cart-btn------->
+
+                    <a href="Shopping Cart HTML.html" >
+                        <button class="add-to-cart" onclick="addToCart('Product 1', 10.00, '//i.imgur.com/0LKWxiJ.jpg')">Add to Cart</button>
+
+
+                    </a>
+                    <!--like-btn------->
+                    <a class="like-btn" style = 'text-decoration: none;'>
+                        <i class="fa fa-heart"></i>
+                    </a>
+
+
+                
+            </div>
+        
+    </section>    
+
+
+
+    
+   <!--==Footer=============================================-->
+   <footer>
+    <div class="footer-container">
+        <!--logo-container------>
+        <div class="footer-logo">
+            <a href="#"><span>F</span>GS</a>
+            <!--social----->
+            <div class="footer-social">
+                <a href="https://www.facebook.com/"><img src="images/fb.png" height="30cm"></a>
+                <a href="https://twitter.com/?lang=en-in"><img src="images/twitter-x-logo-42561.png" height="30cm"></a>
+                <a href="https://www.instagram.com/"><img src="images/logo-instagram-2441.png" height="30cm"></a>
+                <a href="https://www.youtube.com/"><img src="images/youtube-logo-png-2083.png" height="40cm"></a>
+            </div>
+        </div>
+        <!--links------------------------->
+    <div class="footer-links">
+        <strong>Product</strong>
+        <ul>
+            <li><a href="Gardening Category Page HTML.html">Gardening</a></li>
+            <li><a href="Office Category Page HTML.html">Stationary</a></li>
+            <li><a href="pop.html">Popular</a></li>
+            <li><a href="Best Deals HTML.html">New</a></li>
+        </ul>
+    </div>
+    <!--links------------------------->
+    <div class="footer-links">
+        <strong>Category</strong>
+        <ul>
+            <li><a href="Beauty Category Page HTML.html">Beauty</a></li>
+            <li><a href="Fruits Category Page HTML.html">Vegetables</a></li>
+            <li><a href="Baby Care Category Page HTML.html">Baby</a></li>
+            <li><a href="Medicine Category Page HTML.html">Medicine</a></li>
+        </ul>
+    </div>
+    <!--links-------------------------->
+    <div class="footer-links">
+        <strong>Contact</strong>
+        <ul>
+            <li><a href="#">Phone : +15032868</a></li>
+            <li><a href="#">Email : faisalgrocery@gmail.com</a></li>
+            <li><a href="#">Cities we serve</a></li>
+        </ul>
+        <br><p style="color: aliceblue;">Copyright ©2023 | All Rights Reserved</p>
+    </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="products">
+    <h2>Products</h2>
+    <div class="product">
+        <img src="atta.png" alt="Product 1">
+        <p>baby 1</p>
+        <p>$10.00</p>
+        <button class="add-to-cart" onclick="addToCart('Product 1', 10.00, 'product1.jpg')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <p>Product 2</p>
+        <p>$15.00</p>
+        <button class="add-to-cart" onclick="addToCart('Product 2', 15.00, 'product2.jpg')">Add to Cart</button>
+    </div>
+</div>
+
+<script>
+    function addToCart(productName, price, imageSrc) {
+        // Create new list item
+        var li = document.createElement("li");
+        // Create image element
+        var img = document.createElement("img");
+        img.src = imageSrc;
+        img.alt = productName;
+        img.style.width = "50px";
+        img.style.height = "50px";
+        // Create text node with product name and price
+        var textNode = document.createTextNode(productName + " - $" + price.toFixed(2));
+        // Append image and text node to list item
+        li.appendChild(img);
+        li.appendChild(textNode);
+        // Append list item to cart
+        document.getElementById("cart-items").appendChild(li);
+
+
+          
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+</html>
